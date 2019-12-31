@@ -20,13 +20,13 @@ client.on('message', msg => {
     var c = '';
     while (ac === false && pointer != (length - 1)) {
       if (words[pointer].startsWith("a") && words[pointer + 1].startsWith("c")) {
-		if ((syllable(words[pointer]) === 3 || syllable(words[pointer]) === 4) && words[pointer + 1].length > 2) {
+	if ((syllable(words[pointer]) === 3 || syllable(words[pointer]) === 4) && words[pointer + 1].length > 2) {
           a = words[pointer];
           a = `A${a.slice(1, a.length)}`;
           c = words[pointer + 1];
           c = `C${c.slice(1, c.length)}`;
           ac = true;
-		}
+	}
       }
       pointer++;
     }
